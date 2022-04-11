@@ -1,0 +1,35 @@
+{
+  "name": "lens-studio-bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "private": false,
+  "main": "BaseScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build src/BaseScript.js --target=browser --no-source-maps --out-dir SampleLens/Public/Scripts/ --experimental-scope-hoisting --global BaseScript",
+    "dev": "parcel watch src/BaseScript.js --target=browser --no-source-maps --out-dir SampleLens/Public/Scripts/ --global BaseScript",
+    "format": "npx standard --fix \"src/**/*.js\" \"SampleLens/Public/Scripts/MainController.js\" --verbose | snazzy",
+    "postinstall": "rm -rf ./.cache && node ./postinstall.js"
+  },
+  "standard": {
+    "globals": [
+      "print",
+      "script"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.14.3",
+    "@babel/preset-env": "7.14.4",
+    "parcel-bundler": "1.12.5",
+    "snazzy": "9.0.0",
+    "standard": "16.0.3"
+  },
+  "dependencies": {
+    "base-64": "^1.0.0",
+    "es6-promise-polyfill": "1.2.0",
+    "jpeg-js": "^0.4.3"
+  }
+}
